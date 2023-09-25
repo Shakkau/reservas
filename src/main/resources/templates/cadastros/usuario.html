@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Reserva Notes</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5 mb-3">Cadastro de Usuário</h1>
+    <div class="row">
+        <div class="col-8 mb-3">
+            <div class="input-group has-validation">
+                <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                    <label for="nome">Nome</label>
+                </div>
+                <div class="invalid-feedback">
+                    Por favor informe o nome.
+                </div>
+            </div>
+        </div>
+        <div class="col-4 mb-3">
+            <div class="form-floating">
+                <select class="form-select" id="ocupacao" aria-label="Floating label select example">
+                    <option value="" selected disabled>Selecione...</option>
+                    <option value="1">Gestor(a)</option>
+                    <option value="2">Bibliotecário(a)</option>
+                    <option value="3">Professor(a)</option>
+                </select>
+                <label for="ocupacao">Ocupação</label>
+            </div>
+        </div>
+        <div class="col-4 mb-3">
+            <div class="input-group has-validation">
+                <span class="input-group-text"><i class="fa-solid fa-id-card"></i></span>
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="matricula" placeholder="Matrícula" required>
+                    <label for="matricula">Matrícula</label>
+                </div>
+                <div class="invalid-feedback">
+                    Por favor informe a Matrícula.
+                </div>
+            </div>
+        </div>
+        <div class="col-8 mb-3">
+            <div class="input-group has-validation">
+                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="email" placeholder="e-Mail" required>
+                    <label for="email">e-Mail</label>
+                </div>
+                <div class="invalid-feedback">
+                    Por favor informe o e-Mail.
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-lg btn-primary">Cadastrar</button>
+</div>
+</body>
+</html>
