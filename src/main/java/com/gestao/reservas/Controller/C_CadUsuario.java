@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class C_CadUsuario {
 
-    @GetMapping("/")
-    public String redirecionaCadastro() {
-        return "redirect:/cadastro";
-    }
-
     @GetMapping("/cadastro")
     public String getCadastro(){
         return "cadastros/usuario";
