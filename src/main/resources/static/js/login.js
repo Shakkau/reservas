@@ -13,7 +13,7 @@ function enviarDadosLogin(){
         },
         success: function(data){
             if(data){
-                window.location.href="/home";
+                window.location.href="/Home";
             }
         },
         error: function(){
