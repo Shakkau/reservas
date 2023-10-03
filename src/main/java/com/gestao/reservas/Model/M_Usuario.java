@@ -3,11 +3,11 @@ package com.gestao.reservas.Model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="usuario")
+@Table(name="pessoa")
 public class M_Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_pessoa;
     private Long matricula;
     private String email;
     private String nome;
@@ -16,11 +16,11 @@ public class M_Usuario {
     private boolean ativo;
 
     public Long getId() {
-        return id;
+        return id_pessoa;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.id_pessoa = id;
     }
 
     public Long getMatricula() {

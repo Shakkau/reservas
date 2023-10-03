@@ -1,4 +1,17 @@
 $("#login").click(enviarDadosLogin);
+$("#matricula").focus();
+
+$("#matricula").keyup(function(event){
+   if(event.key === "Enter"){
+        $("#senha").focus();
+   }
+});
+
+$("#senha").keyup(function(event){
+   if(event.key === "Enter"){
+       enviarDadosLogin();
+   }
+});
 
 function enviarDadosLogin(){
     let matricula = $("#matricula").val();
@@ -14,6 +27,8 @@ function enviarDadosLogin(){
         success: function(data){
             if(data){
                 window.location.href="/Home";
+            }else{
+                alert("Login ou Senha inválidos!");
             }
         },
         error: function(){
