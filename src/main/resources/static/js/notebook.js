@@ -1,5 +1,3 @@
-$("#enviar").click(enviaCadastroNotebook);
-
 function enviaCadastroNotebook(){
     let numero = $("#numero").val();
     let patrimonio = $("#patrimonio").val();
@@ -12,7 +10,7 @@ function enviaCadastroNotebook(){
             patrimonio : patrimonio
         },
         success: function(data){
-            alert(data);
+            alertaSucesso(data);
         },
         error: function(){
             alert("Deu Ruim!");

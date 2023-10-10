@@ -18,4 +18,15 @@ public class C_Home {
             return "redirect:/";
         }
     }
+
+    @GetMapping("/home")
+    public String getPV_Home(HttpSession session,
+                          Model model){
+        if(session.getAttribute("usuario") != null){
+            model.addAttribute("usuario",session.getAttribute("usuario"));
+            return "home/PV_home";
+        }else{
+            return "redirect:/";
+        }
+    }
 }

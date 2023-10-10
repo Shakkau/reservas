@@ -1,6 +1,10 @@
-$("a").click(function(event){
+$('a').click(function(event){
    event.preventDefault();
-   controleDeRotas($(this).attr("href"));
+   if(!$(this).hasClass('btn')){
+      $('a').removeClass('active disabled');
+      $(this).addClass('active disabled');
+   }
+      controleDeRotas($(this).attr("href"));
 });
 
 function gerarSwal(urlSucesso){
@@ -26,4 +30,15 @@ const swalWithBootstrapButtons = Swal.mixin({
        window.location.href="/";
      }
    });
+}
+
+function alertaSucesso(mensagem){
+    Swal.fire({
+        position: 'top-end',
+        toast: true,
+        icon: 'success',
+        title: mensagem,
+        showConfirmButton: false,
+        timer: 2000
+    });
 }
