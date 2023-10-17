@@ -1,0 +1,96 @@
+<h1 class="mt-5 mb-3">Editar Usuário</h1>
+<div class="row">
+    <div class="col-8 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
+            <div class="form-floating">
+                <input type="text" th:value="${usuario.nome}" class="form-control" id="novoNome" placeholder="Nome" required>
+                <label for="novoNome">Insira seu novo nome</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe o novo nome.
+            </div>
+        </div>
+    </div>
+    <div class="col-4 mb-3">
+        <div class="form-floating">
+            <select class="form-select" id="ocupacao" aria-label="Floating label select example">
+                <option value="1" selected>Gestor(a)</option>
+                <option value="2">Bibliotecário(a)</option>
+                <option value="3">Professor(a)</option>
+            </select>
+            <label for="ocupacao">Ocupação</label>
+        </div>
+    </div>
+    <div class="col-4 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text"><i class="fa-solid fa-id-card"></i></span>
+            <div class="form-floating">
+                <input type="number" th:value="${usuario.matricula}" class="form-control" id="novaMatricula" placeholder="Matrícula" required>
+                <label for="novaMatricula">Insira sua nova matrícula</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe a nova matrícula.
+            </div>
+        </div>
+    </div>
+    <div class="col-8 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+            <div class="form-floating">
+                <input type="text" th:value="${usuario.email}" class="form-control" id="novoEmail" placeholder="e-Mail" required>
+                <label for="novoEmail">Insira seu novo e-mail</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe o novo e-Mail.
+            </div>
+        </div>
+    </div>
+<div class="col-4">
+    <div class="input-group has-validation">
+        <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="senhaAtual" placeholder="SenhaAtual" required>
+            <label for="senhaAtual">Senha Atual</label>
+        </div>
+        <div class="invalid-feedback">
+            Por favor informe a Senha Atual.
+        </div>
+    </div>
+</div>
+<div class="col-4">
+    <div class="input-group has-validation">
+        <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="senhaNova" placeholder="Senha" required>
+            <label for="senhaNova">Senha Nova</label>
+        </div>
+        <div class="invalid-feedback">
+            Por favor informe a nova senha.
+        </div>
+    </div>
+</div>
+<div class="col-4">
+    <div class="input-group has-validation">
+        <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="confirmaSenhaNova" placeholder="Confirme Sua Senha" required>
+            <label for="confirmaSenhaNova">Confirme sua Senha Nova</label>
+        </div>
+        <div class="invalid-feedback">
+            Por favor informe a confirmação de senha idêntica a nova.
+        </div>
+    </div>
+</div>
+</div>
+<div class="row mt-3">
+    <div class="col-6">
+        <button id="enviar" class="btn btn-lg btn-primary">Alterar</button>
+    </div>
+    <div class="col-6">
+        <div class="form-check form-switch form-check-reverse col-6">
+            <input class="form-check-input" type="checkbox" id="ativo">
+            <label class="form-check-label" for="ativo">Ativo</label>
+        </div>
+    </div>
+</div>
