@@ -1,5 +1,6 @@
 package com.gestao.reservas.Controller;
 
+import com.gestao.reservas.Model.M_Resposta;
 import com.gestao.reservas.Model.M_Usuario;
 import com.gestao.reservas.Service.S_Usuario;
 import jakarta.servlet.http.HttpServlet;
@@ -48,5 +49,23 @@ public class C_CadUsuario {
         }else{
             return null;
         }
+    }
+
+    @PostMapping("/edit/usuario")
+    @ResponseBody
+    public M_Resposta postEditUsuario(HttpServletRequest request,
+                                      HttpSession session,
+                                      @RequestParam("nome") String nome,
+                                      @RequestParam("email") String email,
+                                      @RequestParam("senhaAtual") String senha,
+                                      @RequestParam("novaSenha") String novaSenha,
+                                      @RequestParam("confirmaNovaSenha") String confirmaNovaSenha,
+                                      @RequestParam(value="cargo", required = false) String cargo,
+                                      @RequestParam(value="matricula", required = false) String matricula,
+                                      @RequestParam(value="ativo", required = false) String ativo){
+
+        Object usuario = session.getAttribute("usuario");
+        return S_Usuario.editarUsuario(nome,matricula,email,cargo,
+                senha,novaSenha,confirmaNovaSenha,ativo,(M_Usuario) usuario);
     }
 }

@@ -23,11 +23,12 @@ function controleDeRotas(url){
         case "/edit/usuario":
             $.get(url, function(data){
                 $('#mainContainer').html(data);
+                $('#editar').click(editarUsuario);
         });
             break;
         default:
             $.get(url, function(data){
-                $("mainContainer").html(data)
+                $("mainContainer").html(data);
             });
     }
 }

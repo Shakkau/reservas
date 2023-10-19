@@ -1,9 +1,10 @@
+<h1 class="mt-5 mb-3">Editar Usuário</h1>
 <div class="row">
-    <div class="col-5">
+    <div class="col-5 mb-3">
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
             <div class="form-floating">
-                <input type="text" class="form-control" id="novoNome" placeholder="Nome" required>
+                <input type="text" th:value="${usuario.nome}" class="form-control" id="novoNome" placeholder="Nome" required>
                 <label for="novoNome">Insira o novo Nome</label>
             </div>
             <div class="invalid-feedback">
@@ -11,11 +12,11 @@
             </div>
         </div>
     </div>
-    <div class="col-7">
+    <div class="col-7 mb-3">
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
             <div class="form-floating">
-                <input type="text" class="form-control" id="novoEmail" placeholder="E-mail" required>
+                <input type="text" th:value="${usuario.email}" class="form-control" id="novoEmail" placeholder="E-mail" required>
                 <label for="novoEmail">E-mail</label>
             </div>
             <div class="invalid-feedback">
@@ -27,7 +28,7 @@
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
             <div class="form-floating">
-                <input type="number" class="form-control" id="senhaAtual" placeholder="SenhaAtual" required>
+                <input type="password" class="form-control" id="senhaAtual" placeholder="SenhaAtual" required>
                 <label for="senhaAtual">Senha Atual</label>
             </div>
             <div class="invalid-feedback">
@@ -39,8 +40,8 @@
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
             <div class="form-floating">
-                <input type="password" class="form-control" id="senhaNova" placeholder="Senha" required>
-                <label for="senhaNova">Senha Nova</label>
+                <input type="password" class="form-control" id="novaSenha" placeholder="Senha" required>
+                <label for="novaSenha">Senha Nova</label>
             </div>
             <div class="invalid-feedback">
                 Por favor informe a Senha Nova.
@@ -51,8 +52,8 @@
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
             <div class="form-floating">
-                <input type="password" class="form-control" id="confirmaSenhaNova" placeholder="Confirme Sua Senha" required>
-                <label for="confirmaSenhaNova">Confirme sua Senha Nova</label>
+                <input type="password" class="form-control" id="confirmaNovaSenha" placeholder="Confirme Sua Senha" required>
+                <label for="confirmaNovaSenha">Confirme sua Senha Nova</label>
             </div>
             <div class="invalid-feedback">
                 Por favor informe a confirmação de senha atual idêntica.
@@ -60,4 +61,4 @@
         </div>
     </div>
 </div>
-<button id="enviar" class="btn btn-lg btn-primary">Alterar</button>
+<button id="editar" class="btn btn-lg btn-primary mt-3">Alterar</button>

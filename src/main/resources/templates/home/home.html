@@ -5,10 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!--import bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
     <!--import jquery-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -18,13 +23,13 @@
     <script src="js/home.js" defer></script>
     <script src="js/routes.js"></script>
     <script th:if="${usuario.cargo == 1}" src="js/notebook.js"></script>
-    <script th:if="${usuario.cargo == 1}" src="js/usuario.js"></script>
+    <script src="js/usuario.js"></script>
     <!--style-->
     <style type="text/css">
-      h4{
-        color: #fff;
-        margin-right: 1em;
-      }
+        h4{
+          color: #fff;
+          margin-right: 1em;
+        }
     </style>
     <title>Home</title>
 </head>
@@ -35,24 +40,27 @@
             <img src="https://www.sistemafiep.org.br/onde-encontrar/resources/img/logo_sistema.png"
                  height="40px" width="160px">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/home">Home</a>
-        </li>
-        <li th:if="${usuario.cargo == 1}" class="nav-item d-flex">
-            <a class="nav-link" href="/cadastro/notebook">Cadastro de notebooks</a>
-            <a class="nav-link" href="/cadastro">Cadastro de usuários</a>
-            <a class="nav-link" href="/edit/usuario">Editar usuários</a>
-        </li>
-      </ul>
-      <h4 th:text="${'Bem vindo(a): '+ usuario.nome}"></h4>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                </li>
+                <li th:if="${usuario.cargo == 1}" class="nav-item d-flex">
+                    <a class="nav-link" href="/cadastro/notebook">Cadastro de notebooks</a>
+                    <a class="nav-link" href="/cadastro">Cadastro de usuários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/edit/usuario">Editar usuários</a>
+                </li>
+            </ul>
+            <h4 th:text="${'Bem vindo(a): '+ usuario.nome}"></h4>
+        </div>
+        <a href="/logout" class="btn btn-danger text-end">LogOut</a>
     </div>
-      <a href="/logout" class="btn btn-danger text-end">LogOut</a>
-  </div>
 </nav>
 <div id="mainContainer" class="container">
     <h1 class="mt-5">Home Page</h1>
