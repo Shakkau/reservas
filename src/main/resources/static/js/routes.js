@@ -6,6 +6,7 @@ function controleDeRotas(url){
         case "/home":
             $.get(url, function(data){
                 $('#mainContainer').html(data);
+                $("#salvar-reserva").click(salvarReserva);
             });
             break;
         case "/cadastro/notebook":

@@ -42,3 +42,19 @@ function alertaSucesso(mensagem){
         timer: 2000
     });
 }
+
+function salvarReserva(){
+        const dataReserva = $("#data").val();
+        const quantidade = $("#qtd").val();
+        const dataCriacao = new Date().toLocaleDateString();
+
+        const novaLinha = $("<tr>");
+        novaLinha.append($("<td>").text(dataReserva));
+        novaLinha.append($("<td>").text(quantidade));
+        novaLinha.append($("<td>").text(dataCriacao));
+
+        $("#tabela-reservas").append(novaLinha);
+
+        $("#data").val("");
+        $("#qtd").val("");
+};
